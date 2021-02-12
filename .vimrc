@@ -115,6 +115,4 @@ let g:airline_theme='onehalfdark'
 
 let NERDTreeShowHidden=1
 
-au FileType * au BufWrite * :Autoformat
-
 au BufRead,BufNewFile *.imp set filetype=cpp
