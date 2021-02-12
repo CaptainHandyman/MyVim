@@ -113,6 +113,8 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 
 let g:airline_theme='onehalfdark'
 
+let NERDTreeShowHidden=1
+
 au FileType * au BufWrite * :Autoformat
 
 au BufRead,BufNewFile *.imp set filetype=cpp
