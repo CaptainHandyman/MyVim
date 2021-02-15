@@ -31,6 +31,7 @@ Plug 'https://github.com/ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'gilgigilgil/anderson.vim'
+Plug 'https://github.com/preservim/nerdtree'
 
 call plug#end()
 
@@ -44,9 +45,17 @@ let g:clang_format#style_options = {
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
-nnoremap <S-f> :ClangFormat<CR>
+
+nnoremap <S-t> :tabnew<CR>
+nnoremap 9 :tabprevious<CR>
+nnoremap 0 :tabnext<CR>
+nnoremap \ :tabclose<CR>
+noremap <S-f> :ClangFormat<CR>
+noremap <C-n> :NERDTreeToggle<CR>
 
 let g:clang_format#auto_format=1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16_ashes'
+
+let NERDTreeShowHidden=1
