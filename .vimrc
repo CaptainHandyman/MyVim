@@ -4,6 +4,19 @@ set softtabstop=4
 set shiftwidth=4
 set wildmenu
 set noswapfile
+set completeopt-=preview
+set smarttab
+set shiftround
+set hlsearch
+set incsearch
+set smartcase
+set display+=lastline
+set encoding=utf-8
+set linebreak
+set wrap
+set laststatus=2
+set ruler
+set cursorline
 
 colorscheme anderson
 
