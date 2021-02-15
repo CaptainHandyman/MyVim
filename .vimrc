@@ -18,7 +18,8 @@ set laststatus=2
 set ruler
 set cursorline
 
-colorscheme anderson
+set background=light
+colorscheme PaperColor
 
 syntax on
 
@@ -30,8 +31,8 @@ Plug 'https://github.com/rhysd/vim-clang-format'
 Plug 'https://github.com/ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'gilgigilgil/anderson.vim'
 Plug 'https://github.com/preservim/nerdtree'
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
@@ -52,10 +53,14 @@ nnoremap 0 :tabnext<CR>
 nnoremap \ :tabclose<CR>
 noremap <S-f> :ClangFormat<CR>
 noremap <C-n> :NERDTreeToggle<CR>
+noremap <f3> : nohl<CR>
+noremap <f4> : w<CR>
 
 let g:clang_format#auto_format=1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16_ashes'
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm/.ycm_extra_conf.py'
 
 let NERDTreeShowHidden=1
