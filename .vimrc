@@ -17,6 +17,9 @@ set wrap
 set laststatus=2
 set ruler
 set cursorline
+set mouse=a
+
+set noerrorbells visualbell t_vb=
 
 set background=light
 colorscheme PaperColor
@@ -33,6 +36,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'https://github.com/webdevel/tabulous'
 
 call plug#end()
 
@@ -58,9 +62,11 @@ noremap <f4> : w<CR>
 
 let g:clang_format#auto_format=1
 
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16_ashes'
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm/.ycm_extra_conf.py'
+let g:ycm_clangd_args=['--header-insertion=never']
 
 let NERDTreeShowHidden=1
+
+let tabulousCloseStr = 'X'
